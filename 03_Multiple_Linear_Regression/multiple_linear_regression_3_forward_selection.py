@@ -27,28 +27,43 @@ X = onehotencoder_X.fit_transform(X).toarray()
 # Avoiding the Dummy Variable Trap
 X = X[:, 1:]                                        # Removing First Column
 
-# Building Optimal Model using Backward Elimination
+# Building Optimal Model using Forward Selection
 
 # adding a column with all values as ones
 X = np.append(arr=np.ones((50, 1)).astype(int), values=X, axis=1)
 
 # # creating a feature variable with only high impact independent variables
-# X_opt = X[:, [0, 1, 2, 3, 4, 5]]
+# X_opt = X[:, [0, 1]]
 # regressor = sm.OLS(endog=y, exog=X_opt).fit()
 
 # # creating a feature variable with only high impact independent variables
-# X_opt = X[:, [0, 1, 3, 4, 5]]
-# regressor = sm.OLS(endog=y, exog=X_opt).fit()
-
-# # creating a feature variable with only high impact independent variables
-# X_opt = X[:, [0, 3, 4, 5]]
-# regressor = sm.OLS(endog=y, exog=X_opt).fit()
-
-# # creating a feature variable with only high impact independent variables
-# X_opt = X[:, [0, 3, 5]]
+# X_opt = X[:, [0, 2]]
 # regressor = sm.OLS(endog=y, exog=X_opt).fit()
 
 # creating a feature variable with only high impact independent variables
 X_opt = X[:, [0, 3]]
 regressor = sm.OLS(endog=y, exog=X_opt).fit()
-print(regressor.summary())
+
+# # creating a feature variable with only high impact independent variables
+# X_opt = X[:, [0, 4]]
+# regressor = sm.OLS(endog=y, exog=X_opt).fit()
+
+# # creating a feature variable with only high impact independent variables
+# X_opt = X[:, [0, 5]]
+# regressor = sm.OLS(endog=y, exog=X_opt).fit()
+
+# # creating a feature variable with only high impact independent variables
+# X_opt = X[:, [0, 3, 1]]
+# regressor = sm.OLS(endog=y, exog=X_opt).fit()
+
+# creating a feature variable with only high impact independent variables
+# X_opt = X[:, [0, 3, 2]]
+# regressor = sm.OLS(endog=y, exog=X_opt).fit()
+
+# creating a feature variable with only high impact independent variables
+# X_opt = X[:, [0, 3, 4]]
+# regressor = sm.OLS(endog=y, exog=X_opt).fit()
+
+# creating a feature variable with only high impact independent variables
+# X_opt = X[:, [0, 3, 5]]
+# regressor = sm.OLS(endog=y, exog=X_opt).fit()
