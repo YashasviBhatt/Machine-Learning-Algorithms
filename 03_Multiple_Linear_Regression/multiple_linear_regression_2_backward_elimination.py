@@ -32,21 +32,21 @@ X = X[:, 1:]                                        # Removing First Column
 # adding a column with all values as ones
 X = np.append(arr=np.ones((50, 1)).astype(int), values=X, axis=1)
 
-# creating a feature variable with only high impact independent variables
-X_opt = X[:, [0, 1, 2, 3, 4, 5]]
-regressor = sm.OLS(endog=y, exog=X_opt).fit()
-
-# creating a feature variable with only high impact independent variables
-X_opt = X[:, [0, 1, 3, 4, 5]]
-regressor = sm.OLS(endog=y, exog=X_opt).fit()
-
-# creating a feature variable with only high impact independent variables
-X_opt = X[:, [0, 3, 4, 5]]
-regressor = sm.OLS(endog=y, exog=X_opt).fit()
-
-# creating a feature variable with only high impact independent variables
-X_opt = X[:, [0, 3, 5]]
-regressor = sm.OLS(endog=y, exog=X_opt).fit()
+# # creating a feature variable with only high impact independent variables
+# X_opt = X[:, [0, 1, 2, 3, 4, 5]]
+# regressor = sm.OLS(endog=y, exog=X_opt).fit()
+#
+# # creating a feature variable with only high impact independent variables
+# X_opt = X[:, [0, 1, 3, 4, 5]]
+# regressor = sm.OLS(endog=y, exog=X_opt).fit()
+#
+# # creating a feature variable with only high impact independent variables
+# X_opt = X[:, [0, 3, 4, 5]]
+# regressor = sm.OLS(endog=y, exog=X_opt).fit()
+#
+# # creating a feature variable with only high impact independent variables
+# X_opt = X[:, [0, 3, 5]]
+# regressor = sm.OLS(endog=y, exog=X_opt).fit()
 
 # creating a feature variable with only high impact independent variables
 X_opt = X[:, [0, 3]]
