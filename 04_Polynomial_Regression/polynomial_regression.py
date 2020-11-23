@@ -25,6 +25,10 @@ X_poly = poly_reg.fit_transform(X)
 lin_reg_2 = LinearRegression()
 lin_reg_2.fit(X_poly, y)
 
+# Comparing Results
+print(lin_reg.predict(np.array([[6.5]])))
+print(lin_reg_2.predict(poly_reg.transform(np.array([[6.5]]))))
+
 # Visualizing Linear Regression Results
 plt1.scatter(X, y, color='red', label='Scatter Plot')
 plt1.plot(X, lin_reg.predict(X), label='Regression Line')
