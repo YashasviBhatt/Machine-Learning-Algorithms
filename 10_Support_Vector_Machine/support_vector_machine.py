@@ -28,5 +28,5 @@ y_pred = classifier.predict(X_test)
 
 # Evaluating Test Set Results
 cm = confusion_matrix(y_test, y_pred)
-# print(((cm[0][0] + cm[1][1]) / (cm[0][0] + cm[0][1] + cm[1][0] + cm[1][1])))
+# print(((cm[0][0] + cm[1[1]) / (cm[0][0] + cm[0][1] + cm[1][0] + cm[1][1])))
 print(accuracy_score(y_test, y_pred))
