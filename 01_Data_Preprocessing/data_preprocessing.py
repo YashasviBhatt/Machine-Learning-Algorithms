@@ -3,7 +3,6 @@
 # Importing the Libraries
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 # Importing the Dataset
 dF = pd.read_csv('Data.csv')
