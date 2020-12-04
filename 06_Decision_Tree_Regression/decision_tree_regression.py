@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt1
 import matplotlib.pyplot as plt2
-from sklearn.preprocessing import StandardScaler
 from sklearn.tree import DecisionTreeRegressor
 
 # Importing Dataset
